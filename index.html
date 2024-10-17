@@ -1,14 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Midterm Project</title>
-</head>
-<body>
-    <header>
-        <h1>Midterm Project</h1>
-    </header>
-</body>
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head>
+    <!-- Meta tags and other head content -->
+    <title>Insert Password</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/sign-in.css" rel="stylesheet">
+  </head>
+  <body class="d-flex align-items-center py-4 bg-body-tertiary">
+    <main class="form-signin w-100 m-auto">
+      <form id="loginform">
+        <h1 class="h3 mb-3 fw-normal">Enter password for early access</h1>
+        <div class="form-floating">
+          <input type="password" class="form-control" id="passwordInput" placeholder="Password">
+          <label for="floatingPassword">Enter Password</label>
+        </div>
+        <button class="btn btn-primary w-100 py-2" type="submit">Sign in</button>
+      </form>
+      <div id="login"></div> 
+    </main>
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/login.js"></script>
+  </body>
 </html>
