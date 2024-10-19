@@ -298,15 +298,6 @@
     justify-content: center; */
   }
   
-  /* .container1 {
-    width: 375px;
-    height: 520px;
-    background: #fff;
-    border-radius: 15px;
-    box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.06);
-    padding: 20px;
-    overflow-y: scroll;
-  } */
   
   .container1::-webkit-scrollbar{
     display: none;
@@ -367,7 +358,7 @@
   }
   
   
-  /* -----TU AND PING CSS----- */
+
   
   ul{
     font-family: 'Courier New', Courier, monospace;
