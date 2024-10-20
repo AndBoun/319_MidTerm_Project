@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const productDataUrl = "../data.json"; // Path to your JSON file
+    const productDataUrl = "../searchdata.json";
 
     const hideAllProducts = () => {
         const product = document.querySelectorAll(".product");
@@ -28,10 +28,22 @@ document.addEventListener("DOMContentLoaded", function () {
             const h4 = document.createElement("h4");
             h4.textContent = product.name;
             pDetails.appendChild(h4);
+            const reviewDiv = document.createElement("div");
+            reviewDiv.classList.add("review");
 
-            const h5 = document.createElement("h5");
-            h5.textContent = "$" + product.price;
-            pDetails.appendChild(h5);
+            const reviewStars = parseInt(product.review, 10);
+            for (let i = 0; i < 5; i++) {
+                const star = document.createElement("span");
+                star.classList.add("star");
+                if (i < reviewStars) {
+                    star.textContent = "★"; // Filled star
+                } else {
+                    star.textContent = "☆"; // Empty star
+                }
+                reviewDiv.appendChild(star);
+            }
+
+            pDetails.appendChild(reviewDiv);
 
             productDiv.appendChild(pDetails);
 
