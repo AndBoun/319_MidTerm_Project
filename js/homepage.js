@@ -55,8 +55,8 @@ async function beginSetUp() {
 
 function fetchUser() {
     return new Promise((resolve, reject) => {
-        // fetch("../data.json")
-        fetch("https://raw.githubusercontent.com/andboun/319_MidTerm_Project/main/data.json")
+        fetch("data.json")
+        // fetch("https://raw.githubusercontent.com/andboun/319_MidTerm_Project/main/data.json")
         .then(response => {
           if (!response.ok) {
               reject(`Error: ${response.status} ${response.statusText}`);
