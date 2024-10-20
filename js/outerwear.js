@@ -13,13 +13,12 @@ function addToOuterWear(items) {
   items.forEach(element => {
     let div = document.createElement("div");
     div.classList.add("col-md-6", "col-lg-4", "mb-4");
-
     div.innerHTML = `
-      <div class="swiper-slide">
+            <div class="swiper-slide">
         <div class="product-item image-zoom-effect link-effect">
         <div class="image-holder position-relative">
           <a href="index.html">
-            <img src="${element.image}" alt="${element.description}" class="product-image img-fluid">
+            <img src="${element.image}" alt="${element.attribute}" class="product-image img-fluid">
           </a>
           <a href="index.html" class="btn-icon btn-wishlist">
             <svg width="24" height="24" viewBox="0 0 24 24">
@@ -31,6 +30,7 @@ function addToOuterWear(items) {
           <h5 class="element-title text-uppercase fs-5 mt-3">
             <a href="index.html">${element.item}</a>
           </h5>
+          <p>${element.productDescription}</p>
           <a href="#" class="text-decoration-none" data-after="Add to cart">
             <span>$${element.price}</span>
           </a>
