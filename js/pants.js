@@ -1,14 +1,16 @@
-function addToBestSelling(items){
-    let mainContainer = document.getElementById("pantsList");
+function addToPants(items) {
+  let mainContainer = document.getElementById("pantsList");
 
-    if (!mainContainer) {
-        console.error("Element with id 'pantsList' not found.");
-        return;
-    }
+  if (!mainContainer) {
+    console.error("Element with id 'pantsList' not found.");
+    return;
+  }
 
-   items.forEach(element => {
+  console.log("Adding to pants page");
+
+  items.forEach(element => {
     let div = document.createElement("div");
-    div.classList.add("swiper-slide");
+    div.classList.add("col-md-6", "col-lg-4", "mb-4");
     div.innerHTML = `
             <div class="swiper-slide">
         <div class="product-item image-zoom-effect link-effect">
@@ -34,41 +36,42 @@ function addToBestSelling(items){
         </div>
       </div>`;
     mainContainer.appendChild(div);
-   });
+  });
 }
 
-function setMainText(item){
-    let mainContainer = document.getElementById("main-background")
-    let div = document.createElement("div");
-    div.classList.add("video-image", "img-fluid");
-    div.innerHTML = `
+function setMainText(item) {
+  let mainContainer = document.getElementById("main-background")
+  let div = document.createElement("div");
+  div.classList.add("video-image", "img-fluid");
+  div.innerHTML = `
     <img src="${item.image}" alt="${item.description}" class="video-image img-fluid">
     `
-    mainContainer.appendChild(div);
+  mainContainer.appendChild(div);
 }
 
 
 async function beginSetUp() {
-    let data = await fetchUser();
-    addToBestSelling(data.PantsPageShop);
-    setMainText(data.homePageMainImage);
+  let data = await fetchUser();
+  addToPants(data.PantsPageShop);
+  // setMainText(data.homePageMainImage);
 }
 
 function fetchUser() {
-    return new Promise((resolve, reject) => {
-        fetch("pantsData.json")
-        // fetch("https://raw.githubusercontent.com/andboun/319_MidTerm_Project/main/pantsData.json")
-        .then(response => {
-          if (!response.ok) {
-              reject(`Error: ${response.status} ${response.statusText}`);
-          }
-          return response.json();
+  return new Promise((resolve, reject) => {
+    fetch("pantsData.json")
+      // fetch("https://raw.githubusercontent.com/andboun/319_MidTerm_Project/main/pantsData.json")
+      .then(response => {
+        if (!response.ok) {
+          reject(`Error: ${response.status} ${response.statusText}`);
+        }
+        return response.json();
       })
-        .then((data)=>{resolve(data)})
-        .catch((error)=>{console.log(error)});
-    });
+      .then((data) => { resolve(data) })
+      .catch((error) => { console.log(error) });
+  });
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-    beginSetUp();
+document.addEventListener("DOMContentLoaded", function () {
+  console.log("DOMContentLoaded event fired");
+  beginSetUp();
 });
