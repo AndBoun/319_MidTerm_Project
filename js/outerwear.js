@@ -57,7 +57,7 @@ async function beginSetUp() {
 
 function fetchUser() {
   return new Promise((resolve, reject) => {
-    fetch("outerwearData.json")
+    fetch("../outerwearData.json")
     // fetch("https://raw.githubusercontent.com/andboun/319_MidTerm_Project/main/outerwearData.json")
       .then(response => response.json())
       .then(data => resolve(data))
