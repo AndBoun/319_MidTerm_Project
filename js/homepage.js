@@ -42,7 +42,6 @@ function setMainPicture(item){
     div.innerHTML = `
     <img src="${item.image}" alt="${item.description}" class="video-image img-fluid">
     `
-    console.log(div.innerHTML)
     mainContainer.appendChild(div);
 }
 
