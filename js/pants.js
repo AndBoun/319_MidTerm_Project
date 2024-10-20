@@ -40,20 +40,20 @@ function addToPants(items) {
 }
 
 function setMainText(item) {
-  let mainContainer = document.getElementById("main-background")
-  let div = document.createElement("div");
-  div.classList.add("video-image", "img-fluid");
-  div.innerHTML = `
-    <img src="${item.image}" alt="${item.description}" class="video-image img-fluid">
+  let mainContainer = document.getElementById("title-container");
+  let h4 = document.createElement("h4");
+  h4.classList.add("text-uppercase");
+  h4.innerHTML = `
+    <h4 class="text-uppercase">${item}</h4>
     `
-  mainContainer.appendChild(div);
+  mainContainer.appendChild(h4);
 }
 
 
 async function beginSetUp() {
   let data = await fetchUser();
   addToPants(data.PantsPageShop);
-  // setMainText(data.homePageMainImage);
+  setMainText(data.mainTitle);
 }
 
 function fetchUser() {
