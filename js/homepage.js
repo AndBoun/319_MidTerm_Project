@@ -54,7 +54,8 @@ async function beginSetUp() {
 
 function fetchUser() {
     return new Promise((resolve, reject) => {
-        fetch("data.json")
+        // fetch("data.json")
+        fetch("https://andboun.github.io/319_MidTerm_Project/data.json")
         .then((response)=>{return response.json();})
         .then((data)=>{resolve(data)})
         .catch((error)=>{console.log(error)});
