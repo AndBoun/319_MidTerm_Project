@@ -15,7 +15,7 @@ function addToBestSelling(items){
             <div class="product-item image-zoom-effect link-effect">
               <div class="image-holder">
                 <a href="homepage.html">
-                  <img src="./${element.image}" alt="${element.description}" class="product-image img-fluid">
+                  <img src="./${element.image}" alt="${element.attribute}" class="product-image img-fluid">
                 </a>
                 <a href="homepage.html" class="btn-icon btn-wishlist">
                   <svg width="24" height="24" viewBox="0 0 24 24">
@@ -40,7 +40,7 @@ function setMainPicture(item){
     let div = document.createElement("div");
     div.classList.add("video-image", "img-fluid");
     div.innerHTML = `
-    <img src="${item.image}" alt="${item.description}" class="video-image img-fluid">
+    <img src="${item.image}" alt="${item.attribute}" class="video-image img-fluid">
     `
     mainContainer.appendChild(div);
 }
