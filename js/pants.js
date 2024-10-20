@@ -15,7 +15,7 @@ function addToPants(items) {
             <div class="swiper-slide">
         <div class="product-item image-zoom-effect link-effect">
         <div class="image-holder position-relative">
-          <a href="index.html">
+          <a href="pants.html">
             <img src="${element.image}" alt="${element.attribute}" class="product-image img-fluid">
           </a>
           <a href="index.html" class="btn-icon btn-wishlist">
