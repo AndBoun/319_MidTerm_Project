@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const productDataUrl = "data.json"; // Path to your JSON file
+    const productDataUrl = "../data.json"; // Path to your JSON file
 
-    // Function to hide all products
     const hideAllProducts = () => {
         const product = document.querySelectorAll(".product");
         product.forEach(item => {
@@ -9,11 +8,9 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     };
 
-    // Function to display products based on JSON data
     const displayProducts = (products) => {
         const productList = document.getElementById("product-list");
 
-        // Clear existing products
         productList.innerHTML = "";
 
         products.forEach(product => {
@@ -42,21 +39,16 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     };
 
-    // Function to perform search
     const search = () => {
         const searchbox = document.getElementById("search-item").value.trim().toUpperCase();
 
         if (!searchbox) {
-            // If search box is empty, hide all products
             hideAllProducts();
             return;
         }
-
-        // Fetch products from JSON file
         fetch(productDataUrl)
             .then(response => response.json())
             .then(products => {
-                // Filter products based on search input
                 const filteredProducts = products.filter(product =>
                     product.name.toUpperCase().includes(searchbox)
                 );
@@ -67,9 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
             .catch(error => console.error("Error fetching products:", error));
     };
 
-    // Call the hideAllProducts function when the DOM content is loaded
     hideAllProducts();
 
-    // Bind the search function to the keyup event of the search input
     document.getElementById("search-item").addEventListener("keyup", search);
 });
