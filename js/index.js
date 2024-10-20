@@ -1,7 +1,7 @@
 function fetchUser(){
     document.getElementById('login').innerHTML = 'Fetching user...';
     return new Promise((resolve, reject) => {
-        fetch("./js/password.json")  // Ensure the path is correct
+        fetch("./index.json")  // Ensure the path is correct
         .then((response) => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');

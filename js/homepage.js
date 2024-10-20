@@ -14,17 +14,17 @@ function addToBestSelling(items){
     div.innerHTML = `
             <div class="product-item image-zoom-effect link-effect">
               <div class="image-holder">
-                <a href="homepage.html">
+                <a href="outerwear.html">
                   <img src="./${element.image}" alt="${element.attribute}" class="product-image img-fluid">
                 </a>
-                <a href="homepage.html" class="btn-icon btn-wishlist">
+                <a href="outerwear.html" class="btn-icon btn-wishlist">
                   <svg width="24" height="24" viewBox="0 0 24 24">
                     <use xlink:href="#heart"></use>
                   </svg>
                 </a>
                 <div class="product-content">
                   <h5 class="text-uppercase fs-5 mt-3">
-                    <a href="homepage.html">${element.item}</a>
+                    <a href="outerwear.html">${element.item}</a>
                   </h5>
                   <p>${element.productDescription}</p>
                   <a href="homepage.html" class="text-decoration-none" data-after="Add to cart"><span>$${element.price}</span></a>
