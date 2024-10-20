@@ -20,7 +20,7 @@ function addToOuterWear(items) {
           <a href="outerwear.html">
             <img src="${element.image}" alt="${element.attribute}" class="product-image img-fluid">
           </a>
-          <a href="index.html" class="btn-icon btn-wishlist">
+          <a href="outerwear.html" class="btn-icon btn-wishlist">
             <svg width="24" height="24" viewBox="0 0 24 24">
             <use xlink:href="#heart"></use>
             </svg>
@@ -28,7 +28,7 @@ function addToOuterWear(items) {
         </div>
         <div class="product-content">
           <h5 class="element-title text-uppercase fs-5 mt-3">
-            <a href="index.html">${element.item}</a>
+            <a href="outerwear.html">${element.item}</a>
           </h5>
           <p>${element.productDescription}</p>
           <a href="#" class="text-decoration-none" data-after="Add to cart">
