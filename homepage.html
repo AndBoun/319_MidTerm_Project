@@ -164,7 +164,6 @@
             <use xlink:href="#search"></use>
           </svg></button>
       </form>
-    <script src="./js/homepage.js"></script>
       <h5 class="cat-list-title">Browse Categories</h5>
 
       <ul class="cat-list">
@@ -328,8 +327,8 @@
     <div class="container-fluid">
       <div class="row">
         <div class="video-content open-up" data-aos="zoom-out">
-          <div class="video-bg">
-            <img src="images/main_drop.jpeg" alt="video" class="video-image img-fluid">
+          <div class="video-bg" id="main-background">
+           
           </div>
         </div>
       </div>
@@ -343,127 +342,7 @@
         <a href="homepage.html" class="btn-link">View All Products</a>
       </div>
       <div class="swiper product-swiper open-up" data-aos="zoom-out">
-        <div class="swiper-wrapper d-flex">
-          <div class="swiper-slide">
-            <div class="product-item image-zoom-effect link-effect">
-              <div class="image-holder">
-                <a href="homepage.html">
-                  <img src="images/croc1.png" alt="categories" class="product-image img-fluid">
-                </a>
-                <a href="homepage.html" class="btn-icon btn-wishlist">
-                  <svg width="24" height="24" viewBox="0 0 24 24">
-                    <use xlink:href="#heart"></use>
-                  </svg>
-                </a>
-                <div class="product-content">
-                  <h5 class="text-uppercase fs-5 mt-3">
-                    <a href="homepage.html">CROC HOOD</a>
-                  </h5>
-                  <a href="homepage.html" class="text-decoration-none" data-after="Add to cart"><span>$95.00</span></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="product-item image-zoom-effect link-effect">
-              <div class="image-holder">
-                <a href="homepage.html">
-                  <img src="images/rat1.jpeg" alt="product" class="product-image img-fluid">
-                </a>
-                <a href="homepage.html" class="btn-icon btn-wishlist">
-                  <svg width="24" height="24" viewBox="0 0 24 24">
-                    <use xlink:href="#heart"></use>
-                  </svg>
-                </a>
-                <div class="product-content">
-                  <h5 class="text-uppercase fs-5 mt-3">
-                    <a href="homepage.html">Baggy Shirt</a>
-                  </h5>
-                  <a href="homepage.html" class="text-decoration-none" data-after="Add to cart"><span>$55.00</span></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="product-item image-zoom-effect link-effect">
-              <div class="image-holder">
-                <a href="homepage.html">
-                  <img src="images/rat2.jpeg" alt="categories" class="product-image img-fluid">
-                </a>
-                <a href="homepage.html" class="btn-icon btn-wishlist">
-                  <svg width="24" height="24" viewBox="0 0 24 24">
-                    <use xlink:href="#heart"></use>
-                  </svg>
-                </a>
-                <div class="product-content">
-                  <h5 class="text-uppercase fs-5 mt-3">
-                    <a href="homepage.html">Cotton coat</a>
-                  </h5>
-                  <a href="homepage.html" class="text-decoration-none" data-after="Add to cart"><span>$65.00</span></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="product-item image-zoom-effect link-effect">
-              <div class="image-holder">
-                <a href="homepage.html">
-                  <img src="images/crewneck1.jpeg" alt="categories" class="product-image img-fluid">
-                </a>
-                <a href="homepage.html" class="btn-icon btn-wishlist">
-                  <svg width="24" height="24" viewBox="0 0 24 24">
-                    <use xlink:href="#heart"></use>
-                  </svg>
-                </a>
-                <div class="product-content">
-                  <h5 class="text-uppercase fs-5 mt-3">
-                    <a href="homepage.html">Handmade crop sweater</a>
-                  </h5>
-                  <a href="homepage.html" class="text-decoration-none" data-after="Add to cart"><span>$50.00</span></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="product-item image-zoom-effect link-effect">
-              <div class="image-holder">
-                <a href="homepage.html">
-                  <img src="images/crewneck2.jpeg" alt="categories" class="product-image img-fluid">
-                </a>
-                <a href="homepage.html" class="btn-icon btn-wishlist">
-                  <svg width="24" height="24" viewBox="0 0 24 24">
-                    <use xlink:href="#heart"></use>
-                  </svg>
-                </a>
-                <div class="product-content">
-                  <h5 class="text-uppercase fs-5 mt-3">
-                    <a href="homepage.html">Korean flag crewneck</a>
-                  </h5>
-                  <a href="homepage.html" class="text-decoration-none" data-after="Add to cart"><span>$70.00</span></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="product-item image-zoom-effect link-effect">
-              <div class="image-holder">
-                <a href="homepage.html">
-                  <img src="images/rat3.jpeg" alt="categories" class="product-image img-fluid">
-                </a>
-                <a href="homepage.html" class="btn-icon btn-wishlist">
-                  <svg width="24" height="24" viewBox="0 0 24 24">
-                    <use xlink:href="#heart"></use>
-                  </svg>
-                </a>
-                <div class="product-content">
-                  <h5 class="text-uppercase fs-5 mt-3">
-                    <a href="homepage.html">Plaid Flannel</a>
-                  </h5>
-                  <a href="homepage.html" class="text-decoration-none" data-after="Add to cart"><span>$70.00</span></a>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="swiper-wrapper d-flex" id="bestSellersList">  
         </div>
         <div class="swiper-pagination"></div>
       </div>
@@ -600,6 +479,8 @@
     crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script src="js/script.min.js"></script>
+  <script src="./js/homepage.js"></script>
+
 </body>
 
 </html>
