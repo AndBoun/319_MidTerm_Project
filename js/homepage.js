@@ -26,6 +26,7 @@ function addToBestSelling(items){
                   <h5 class="text-uppercase fs-5 mt-3">
                     <a href="homepage.html">${element.item}</a>
                   </h5>
+                  <p>${element.productDescription}</p>
                   <a href="homepage.html" class="text-decoration-none" data-after="Add to cart"><span>$${element.price}</span></a>
                 </div>
               </div>
@@ -54,9 +55,14 @@ async function beginSetUp() {
 
 function fetchUser() {
     return new Promise((resolve, reject) => {
-        fetch("data.json")
+        fetch("../data.json")
         // fetch("https://raw.githubusercontent.com/andboun/319_MidTerm_Project/main/data.json")
-        .then((response)=>{return response.json();})
+        .then(response => {
+          if (!response.ok) {
+              reject(`Error: ${response.status} ${response.statusText}`);
+          }
+          return response.json();
+      })
         .then((data)=>{resolve(data)})
         .catch((error)=>{console.log(error)});
     });
