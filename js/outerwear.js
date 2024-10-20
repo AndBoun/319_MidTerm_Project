@@ -1,19 +1,19 @@
 function addToOuterWear(items) {
-    let mainContainer = document.getElementById("outerwearList");
-  
-    if (!mainContainer) {
-      console.error("Element with id 'outerwearList' not found.");
-      return;
-    }
-  
-    console.log("Adding to outerwear page");
-  
-    mainContainer.innerHTML = "";
+  let mainContainer = document.getElementById("outerwearList");
 
-    items.forEach(element => {
-      let div = document.createElement("div");
-      div.classList.add("col-md-6", "col-lg-4", "mb-4");
-  
+  if (!mainContainer) {
+    console.error("Element with id 'outerwearList' not found.");
+    return;
+  }
+
+  console.log("Adding to outerwear page");
+
+  mainContainer.innerHTML = "";
+
+  items.forEach(element => {
+    let div = document.createElement("div");
+    div.classList.add("col-md-6", "col-lg-4", "mb-4");
+
     div.innerHTML = `
       <div class="swiper-slide">
         <div class="product-item image-zoom-effect link-effect">
@@ -37,36 +37,35 @@ function addToOuterWear(items) {
         </div>
         </div>
       </div>`;
-  
-      mainContainer.appendChild(div);
-    });
-  }
-  
-  async function beginSetUp() {
-    try {
-      let data = await fetchUser();
-      if (data && data.OuterwearPageShop) {
-        addToOuterWear(data.OuterwearPageShop);
-      } else {
-        console.error("Data or OuterwearPageShop not found in the response.");
-      }
-    } catch (error) {
-      console.error("Error during setup:", error);
-    }
-  }
-  
-  function fetchUser() {
-    return new Promise((resolve, reject) => {
-      fetch("outerwearData.json")
-        // fetch("https://andboun.github.io/319_MidTerm_Project/data.json")
-        .then(response => response.json())
-        .then(data => resolve(data))
-        .catch(error => reject(error));
-    });
-  }
-  
-  // Execute the setup when DOM content is loaded
-  document.addEventListener("DOMContentLoaded", function () {
-    beginSetUp();
+
+    mainContainer.appendChild(div);
   });
-  
+}
+
+async function beginSetUp() {
+  try {
+    let data = await fetchUser();
+    if (data && data.OuterwearPageShop) {
+      addToOuterWear(data.OuterwearPageShop);
+    } else {
+      console.error("Data or OuterwearPageShop not found in the response.");
+    }
+  } catch (error) {
+    console.error("Error during setup:", error);
+  }
+}
+
+function fetchUser() {
+  return new Promise((resolve, reject) => {
+    fetch("outerwearData.json")
+    // fetch("https://raw.githubusercontent.com/andboun/319_MidTerm_Project/main/outerwearData.json")
+      .then(response => response.json())
+      .then(data => resolve(data))
+      .catch(error => reject(error));
+  });
+}
+
+// Execute the setup when DOM content is loaded
+document.addEventListener("DOMContentLoaded", function () {
+  beginSetUp();
+});
